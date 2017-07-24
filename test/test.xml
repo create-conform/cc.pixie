@@ -1,0 +1,114 @@
+<xml>
+    <ui name="uiTest" main="panelTest" type="screen">
+        <panel name="panelTest" title="Demo Panel (blueprint Theme)" width="400" height="350" position="center" closable="true" resizable="true" theme="blueprint">
+            <strip>
+                <bar>
+                    <barGroup>
+                        <barItem text="File">
+                            <barMenu>
+                                <barMenuItem text="Open..." />
+                                <barMenuItem text="Close" />
+                                <barMenuItem text="Exit" />
+                            </barMenu>
+                        </barItem>
+                        <barItem text="Edit">
+                            <barMenu>
+                                <barMenuItem text="Cut" />
+                                <barMenuItem text="Copy" />
+                                <barMenuItem text="Paste" />
+                                <barMenuItem text="Paste special">
+                                    <barMenu>
+                                        <barMenuItem text="Match style" />
+                                        <barMenuItem text="As plain text" />
+                                    </barMenu>
+                                </barMenuItem>
+                            </barMenu>
+                        </barItem>
+                    </barGroup>
+                </bar>
+            </strip>
+            <contents>
+                <split>
+                    <container1>
+                        <label text="Container 1"></label>
+                    </container1>
+                    <container2>
+                        <group pattern="blueprint">
+                            <label x="20" y="20" text="Control test suite"></label>
+                        </group>
+                        <button text="Show Darktech" x="20" y="60" onclick="panelTest2.show"></button>
+                        <button text="Show Vanilla" x="20" y="100" onclick="panelTest3.show"></button>
+                    </container2>
+                </split>
+            </contents>
+        </panel>
+        <panel name="panelTest2" title="Demo Panel (darktech Theme)" width="400" height="350" position="center" closable="true" resizable="true" theme="darktech">
+            <strip>
+                <bar>
+                    <barGroup>
+                        <barItem text="File">
+                            <barMenu>
+                                <barMenuItem text="Open..." />
+                                <barMenuItem text="Close" />
+                                <barMenuItem text="Exit" />
+                            </barMenu>
+                        </barItem>
+                        <barItem text="Edit">
+                            <barMenu>
+                                <barMenuItem text="Cut" />
+                                <barMenuItem text="Copy" />
+                                <barMenuItem text="Paste" />
+                                <barMenuItem text="Paste special">
+                                    <barMenu>
+                                        <barMenuItem text="Match style" />
+                                        <barMenuItem text="As plain text" />
+                                    </barMenu>
+                                </barMenuItem>
+                            </barMenu>
+                        </barItem>
+                    </barGroup>
+                </bar>
+            </strip>
+            <contents>
+                <group x="20" y="20" width="200" height="160">
+                    <label x="20" y="20" text="Inside a group box."></label>
+                </group>
+                <button text="OK" x="20" y="20" fromBottom="true" fromRight="true"></button>
+            </contents>
+        </panel>
+        <panel name="panelTest3" title="Demo Panel (vanilla Theme)" width="400" height="350" position="center" closable="true" resizable="true" theme="vanilla">
+            <strip>
+                <bar>
+                    <barGroup>
+                        <barItem text="File">
+                            <barMenu>
+                                <barMenuItem text="Open..." />
+                                <barMenuItem text="Close" />
+                                <barMenuItem text="Exit" />
+                            </barMenu>
+                        </barItem>
+                        <barItem text="Edit">
+                            <barMenu>
+                                <barMenuItem text="Cut" />
+                                <barMenuItem text="Copy" />
+                                <barMenuItem text="Paste" />
+                                <barMenuItem text="Paste special">
+                                    <barMenu>
+                                        <barMenuItem text="Match style" />
+                                        <barMenuItem text="As plain text" />
+                                    </barMenu>
+                                </barMenuItem>
+                            </barMenu>
+                        </barItem>
+                    </barGroup>
+                </bar>
+            </strip>
+            <contents>
+                <group x="20" y="20" width="200" height="160">
+                    <label x="20" y="20" text="Inside a group box."></label>
+                </group>
+                <button text="OK" x="20" y="20" fromBottom="true" fromRight="true"></button>
+            </contents>
+        </panel>
+    </ui>
+</xml>

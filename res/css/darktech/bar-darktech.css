@@ -1,0 +1,8 @@
+[data-pixie-theme="darktech"][data-pixie-type^="Bar "][data-pixie-type~="node"] {
+    min-height: 22px;
+    min-width: 22px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+}

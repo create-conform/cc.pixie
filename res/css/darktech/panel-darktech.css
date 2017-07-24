@@ -1,0 +1,205 @@
+/***************************************************************************************************************************************
+*
+*   BODY (For resizing)
+*
+***************************************************************************************************************************************/
+[data-host-runtime="nw-js"] body[data-pixie-theme="darktech"] {
+    background-color: #101010;
+}
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-type~="node"] {
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 3px;
+    /*border: 1px solid #403F3F;*/
+    border: 1px solid rgba(0,0,0,0.8);
+    background-color: #101010;
+}
+[data-host-runtime="nw-js"] [data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-type~="node"] {
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px rgb(0,0,0) !important;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-state$="inactive out off"] {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-state$="active out off"] {
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-fullScreen="true"] {
+    box-shadow: none;
+    border: none;
+}
+
+/***************************************************************************************************************************************
+*
+*   TITLEBAR NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] {
+    /*border-bottom: 1px solid #000000;*/
+    min-height: 16px;
+    width: 100%;
+    position: relative;
+    line-height: 15px;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+[data-host-runtime="nw-js"] [data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] {
+    border-radius: 0px;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="inactive out off"] > [data-pixie-type~="titleBarNode"]{
+    background-color: rgba(255,255,255,0.055);
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="titleBarNode"]{
+    background-color: rgba(255,255,255,0.075);
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="inactive out off"] > [data-pixie-type~="titleBarNode"]:after {
+    border: 1px solid #1A1A1A;
+}
+:not([data-host-runtime="nw-js"]) [data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="active out off"] > [data-pixie-type~="titleBarNode"]:after {
+    border: none;
+}
+/***************************************************************************************************************************************
+*
+*   TITLEBAR TEXT NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarTextNode"] {
+    position: absolute;
+    margin: auto;
+    width: calc(100% - 20px);
+    height: 100%;
+    white-space: nowrap;
+    text-align: center;
+    color: #292929;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* text-shadow: -0.05em -0.05em 0em #5F5F5F; */
+    cursor: default;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="inactive out off"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarTextNode"] {
+    color: #4C4C4C;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="active out off"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarTextNode"] {
+    color: #565656;
+}
+/***************************************************************************************************************************************
+*
+*   TITLEBAR CLOSE NODE
+*
+***************************************************************************************************************************************/
+[data-host-runtime="nw-js"] [data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarCloseNode"],
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"] {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    z-index: 1;
+}
+
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="enabled inactive out off"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"] {
+    border-radius: 8px;
+    /*box-shadow: inset 0px 0px 1px rgba(0,0,0,0.05);*/
+}
+/*[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"] {
+    background-color: #D0CFCF;
+    border-radius: 8px;
+    /!*border-bottom: 1px solid #DEDEDE;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);*!/
+}*/
+[data-host-runtime="nw-js"] [data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarCloseNode"]:after,
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"]:after {
+    content: "x";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: #929292;
+    font-size: 0.9em;
+    cursor: default;
+    line-height: 0.9em;
+    text-align: center;
+}
+/*[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"]:after {
+    color: #171717;
+    text-shadow: 0px -1px 0px rgba(241, 241, 241, 0.8);
+}*/
+/***************************************************************************************************************************************
+*
+*   STRIP NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="stripNode"] {
+    background-color: rgba(255,255,255,0.075);
+}
+/***************************************************************************************************************************************
+*
+*   CONTENT NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="contentNode"] {
+    width: 100%;
+    height: calc(100% - 17px);
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"] > [data-pixie-type~="contentNode"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+/***************************************************************************************************************************************
+*
+*   SIZER NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="enabled inactive out off"] > [data-pixie-type~="sizerNode"] {
+    cursor: nw-resize;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0px;
+    right: 0px;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="sizerNode"] {
+    cursor: nw-resize;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0px;
+    right: 0px;
+}
+/***************************************************************************************************************************************
+*
+*   DISABLE NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Panel"][data-pixie-state~="disabled"] > [data-pixie-type~="contentNode"] {
+    opacity: 0.3;
+}

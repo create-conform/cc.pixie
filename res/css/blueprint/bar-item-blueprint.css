@@ -1,0 +1,47 @@
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"][data-pixie-type~="node"] {
+    min-height: 18px;
+    min-width: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #E2E2E2;
+    /*box-shadow: 0px 2px 4px rgba(0,0,0,0.3);*/
+    position: relative;
+    float: left;
+    /*display: flex;*/
+    left: -1px;
+}
+
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"][data-pixie-type~="node"][data-pixie-state$="enabled inactive out on"],
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"][data-pixie-type~="node"]:hover {
+    background-color: rgba(255,255,255,0.79);
+    color: #106293;
+    cursor: default;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"] > [data-pixie-type~="itemNode"] {
+    display: inline-block;
+    padding: 0px 10px;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"] > [data-pixie-type~="itemNode"]:empty {
+    display: none;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"] > [data-pixie-type~="itemNode"][data-pixie-state$="enabled inactive over on"] {
+    background-color: #FFFFFF;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"] > [data-pixie-type~="iconNode"][src=""] {
+    display: none;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"] > [data-pixie-type~="iconNode"] {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    /*min-height: 16px;*/
+    height: calc(100% - 6px);
+    padding: 3px;
+    display: block;
+    float: left;
+    opacity: 0.8;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"][data-pixie-type~="node"][data-pixie-state$="enabled inactive out on"] > [data-pixie-type~="iconNode"],
+[data-pixie-theme="blueprint"][data-pixie-type^="BarItem"][data-pixie-type~="node"]:hover > [data-pixie-type~="iconNode"] {
+    filter: grayscale(100%) url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
+    -webkit-filter: grayscale(100%) invert();
+}

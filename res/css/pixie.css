@@ -1,0 +1,110 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+[data-pixie-type^="UI"] {
+    transition: background-color 0.25s ease-out;
+}
+
+
+[data-pixie-runtime="nw-js"] body > [data-pixie-type^="Panel"][data-pixie-type~="node"] {
+    left: initial !important;
+    top: initial !important;
+    right: initial !important;
+    bottom: initial !important;
+    z-index: 0 !important;
+}
+[data-pixie-runtime="nw-js"][data-pixie-platform="macos"] [data-pixie-type^="Panel"][data-pixie-type~="node"],
+[data-pixie-runtime="nw-js"]:not([data-pixie-platform="macos"]) body > [data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-theme="vanilla"],
+[data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-fullScreen="true"] {
+    border: none !important;
+}
+[data-pixie-runtime="nw-js"]:not([data-pixie-platform="macos"]) body > [data-pixie-type^="Panel"][data-pixie-type~="node"]:not([data-pixie-theme="vanilla"])
+{
+    width: calc(100% - 2px) !important;
+    height: calc(100% - 2px) !important;
+}
+[data-pixie-runtime="nw-js"] body > [data-pixie-type^="Panel"][data-pixie-type~="node"],
+[data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-fullScreen="true"] {
+    box-shadow: none !important;
+    border-radius: 0px !important;
+}
+/*
+THIS ALSO WORKS WELL, COULD REPLACE disableNode by a pure CSS solution, but then you lose the ability to have the disableNode
+in any other place than the root node.
+
+[data-pixie-type^="Panel"][data-pixie-state~="disabled"] > [data-pixie-type~="contentNode"]:after {
+    content:'TEST';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2147483647;
+}*/
+
+
+
+
+
+[data-pixie-type~="disableNode"]
+{
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out, height 0.25s cubic-bezier(0, 0, 0, 6.61) 0.3s;
+    overflow: hidden;
+}
+[data-pixie-type~="disableNode"]:not([data-pixie-disable-status=""])
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(235,235,235,0.9);
+}
+[data-pixie-state~="disabled"] > [data-pixie-type~="disableNode"],
+[data-pixie-state~="disabled"] > [data-pixie-type^="Panel "] > [data-pixie-type~="disableNode"]
+{
+    opacity: 1;
+    transition: opacity 0.15s ease-in-out, height 0s linear 0s;
+}
+[data-pixie-type~="disableNode"]:not([data-pixie-disable-status=""]):after
+{
+    content: '\00000a\00000a' attr(data-pixie-disable-status);
+    text-align: center;
+    /*position: absolute;*/
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: calc(100% - 80px);
+    max-width: 300px;
+    height: 16px;
+
+    /* WITHOUT INSET BORDER, BUT WITH TRANSPARENCY */
+    /*border: 2px solid rgba(0,0,0,0.1);*/
+
+    /* WITH INSET BORDER, BUT WITHOUT TRANSPARENCY */
+    border: 2px solid rgb(200,200,200);
+    box-shadow: inset 0px 0px 0px 1px rgb(235,235,235);
+
+    border-radius: 10px;
+    /*margin: 0px 40px;
+    left: 0;
+    margin-top: calc(50% - 8px);*/
+    background-color: rgba(0,0,0,0.1);
+    background-size: 400% 200%;
+    background-position: 0px -2px;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.2) 10px, rgba(255,255,255,.2) 20px);
+
+    animation-timing-function: linear;
+    animation: uiDisableNodeProgressSlide 0.75s linear infinite;
+}
+
+@keyframes uiDisableNodeProgressSlide {
+    0% { background-position-x: 0px; }
+    100% { background-position-x: -28px; }
+}

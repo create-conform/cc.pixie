@@ -1,0 +1,7 @@
+[data-pixie-theme="vanilla"][data-pixie-type^="Bar "][data-pixie-type~="node"] {
+    min-height: 22px;
+    min-width: 22px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    color: #292929;
+}

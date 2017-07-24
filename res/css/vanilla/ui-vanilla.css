@@ -1,0 +1,15 @@
+[data-pixie-theme="vanilla"] {
+    /*DEFAULT COLOR*/
+    color: #0C0C0C;
+    /*DEFAULT FONT*/
+    font-family: 'roboto-regular';
+    /*DEFAULT FONT SIZE*/
+    font-size: 12px;
+    /*DEFAULT FONT WEIGHT*/
+    font-weight: normal;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="UI"][data-pixie-type~="node"] {
+    background-color: #252525;
+    /*transition: opacity 0.25s ease-in-out, height 0.25s cubic-bezier(0, 0, 0, 6.61) 0.3s;*/
+    /*background-color: rgb(235,235,235);*/
+}

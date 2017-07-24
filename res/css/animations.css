@@ -1,0 +1,132 @@
+/***************************************************************************************************************************************
+*
+*   ANIMATION SELECTORS
+*
+***************************************************************************************************************************************/
+[data-pixie-animation="fadeIn"] {
+    animation-fill-mode:both;
+    animation-duration:0.2s;
+    animation-name: pixieAnimationsFadeIn;
+}
+[data-pixie-animation="fadeOut"] {
+    animation-fill-mode:both;
+    animation-duration:0.2s;
+    animation-name: pixieAnimationsFadeOut;
+}
+[data-pixie-animation="bounceIn"] {
+    animation-fill-mode:both;
+    animation-duration:0.2s;
+    animation-name: pixieAnimationsBounceIn;
+}
+[data-pixie-animation="zoomFadeIn"] {
+    animation-fill-mode:both;
+    animation-duration:0.2s;
+    animation-name: pixieAnimationsZoomFadeIn;
+}
+[data-pixie-animation="zoomFadeOut"] {
+    animation-fill-mode:both;
+    animation-duration:0.2s;
+    animation-name: pixieAnimationsZoomFadeOut;
+}
+[data-pixie-animation="bounce"] {
+    animation-fill-mode:both;
+    animation-duration:0.2s;
+    animation-name: pixieAnimationsBounce;
+}
+
+/***************************************************************************************************************************************
+*
+*   ANIMATIONS
+*
+***************************************************************************************************************************************/
+@keyframes pixieAnimationsFadeIn {
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+@keyframes pixieAnimationsFadeOut {
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+@keyframes pixieAnimationsBounceIn {
+    0%
+    {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50%
+    {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+
+    70%
+    {
+        transform: scale(.97);
+    }
+
+    100%
+    {
+        transform: scale(1);
+    }
+}
+@keyframes pixieAnimationsBounce {
+    0%
+    {
+        transform: scale(.97);
+    }
+
+    50%
+    {
+        transform: scale(1.03);
+    }
+
+    70%
+    {
+        transform: scale(.97);
+    }
+
+    100%
+    {
+        transform: scale(1);
+    }
+}
+@keyframes pixieAnimationsZoomFadeIn {
+    0%
+    {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes pixieAnimationsZoomFadeOut {
+    0%
+    {
+        transform: scale(1);
+    }
+
+    100%
+    {
+        opacity: 0;
+        transform: scale(.8);
+    }
+}

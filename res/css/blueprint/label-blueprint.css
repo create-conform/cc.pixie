@@ -1,0 +1,53 @@
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="blueprint"][data-pixie-type^="Label"][data-pixie-type~="node"] {
+    /* text-shadow: -0.08em -0.08em 0em #222222; */
+    text-align: center;
+    cursor: default;
+    min-width: 8px;
+    min-height: 8px;
+
+    font-weight: bold;
+    font: 1em 'roboto-mono';
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+    padding: 1px 1px;
+    color: #feffff;
+    letter-spacing: 4px;
+}
+
+/*
+
+HORIZONTAL GUIDE
+
+*/
+/*
+height: calc(100% + 42px);
+width: 0px;
+top: -21px;
+left: 30px;
+position: absolute;
+background-image: linear-gradient(to right, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 0%);
+background-position: 17px 0px;
+background-size: 20px 2px;
+background-repeat: repeat-x;*/
+
+/*
+
+VERTICAL GUIDE
+
+*/
+/*
+    height: 0px;
+    width: calc(100% + 40px);
+    top: 30px;
+    left: -21px;
+    position: absolute;
+    background-image: linear-gradient(rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 0%);
+background-position: 0px 17px;
+background-size: 2px 20px;
+background-repeat: repeat-y;*/

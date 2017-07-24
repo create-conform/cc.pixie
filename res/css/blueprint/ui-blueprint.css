@@ -1,0 +1,9 @@
+[data-pixie-theme="blueprint"] [data-pixie-type~="disableNode"]:not([data-pixie-disable-status=""]) {
+    background-color: transparent;
+    background-image: radial-gradient(rgba(17, 102, 151,0.7), rgba(8, 89, 140,0.7));
+}
+[data-pixie-theme="blueprint"] [data-pixie-type~="disableNode"]:not([data-pixie-disable-status=""]):after {
+    box-shadow: none;
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.1);
+}

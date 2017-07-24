@@ -1,0 +1,56 @@
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="blueprint"][data-pixie-type^="Button"][data-pixie-type~="node"] {
+    color: rgba(255,255,255,0.8);
+    text-shadow: -0.08em -0.08em 0em rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: default;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 3px;
+    border: 2px solid rgba(255,255,255,0.8);
+    font: 1em 'roboto-regular';
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 10px;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    /* color: #feffff !important; */
+    letter-spacing: 1px;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="Button"][data-pixie-type~="node"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+}
+
+[data-pixie-theme="blueprint"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled inactive over off"] {
+    background-color: rgba(255,255,255,0.1);
+}
+/*[data-pixie-theme="bueprint"][data-pixie-type^="Button"][data-pixie-type~="node"]:after {
+    position: absolute;
+    top: -1px; bottom: -1px;
+    left: -1px; right: -1px;
+    background: linear-gradient(#383838, #1F1F1F);
+    content: '';
+    z-index: -1;
+    border-radius: 3px;
+}*/
+[data-pixie-theme="blueprint"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled inactive out off"] {
+    /*box-shadow: 12px 12px 55px rgba(0,0,0,0.3);*/
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="on"],
+[data-pixie-theme="blueprint"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled active over off"] {
+    /*box-shadow: 12px 12px 75px rgba(0,0,0,0.6);*/
+    background-color: rgba(255,255,255,1);
+    color: rgb(14, 98, 146);
+}

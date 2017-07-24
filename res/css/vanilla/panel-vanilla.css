@@ -1,0 +1,229 @@
+/***************************************************************************************************************************************
+*
+*   BODY (For resizing)
+*
+***************************************************************************************************************************************/
+[data-host-runtime="nw-js"] body[data-pixie-theme="vanilla"] {
+    background-color: #BFBFBF;
+}
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-type~="node"] {
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 4px;
+    background-color: #BFBFBF;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-state$="inactive out off"] {
+    box-shadow: 2px 2px 18px rgba(0,0,0,0.3);
+    /*border: 1px solid #9E9E9E;*/
+    border: none;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-state$="active out off"] {
+    box-shadow: 2px 2px 100px rgba(0,0,0,0.6);
+    /*border: 1px solid #828282;*/
+    border: none;
+}
+[data-pixie-theme="vanilla"][data-pixie-style="dark"][data-pixie-type^="Panel"][data-pixie-type~="node"][data-pixie-state$="active out off"] {
+    background-color: #404040;
+    border: 1px solid rgba(0,0,0,0.7);
+}
+
+/***************************************************************************************************************************************
+*
+*   TITLEBAR NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] {
+    min-height: 20px;
+    width: 100%;
+    position: relative;
+    line-height: 20px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    overflow: hidden;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="inactive out off"] > [data-pixie-type~="titleBarNode"]{
+    /*background: -webkit-linear-gradient(#C4C4C4, #BDBDBD);
+    background: -moz-linear-gradient(top, #C4C4C4, #BDBDBD);
+    background: -ms-linear-gradient(#C4C4C4, #BDBDBD);
+    background: -o-linear-gradient(#C4C4C4, #BDBDBD);
+    background: linear-gradient(#C4C4C4, #BDBDBD);*/
+    background-color: #BFBFBF;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="titleBarNode"]{
+    background: -webkit-linear-gradient(#DCDCDC, #D0D0D0);
+    background: -moz-linear-gradient(top, #DCDCDC, #D0D0D0);
+    background: -ms-linear-gradient(#DCDCDC, #D0D0D0);
+    background: -o-linear-gradient(#DCDCDC, #D0D0D0);
+    background: linear-gradient(#DCDCDC, #D0D0D0);
+    box-shadow: inset 0px 2px 3px rgba(226, 226, 226, 0.4);
+}
+[data-pixie-theme="vanilla"][data-pixie-style="dark"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="titleBarNode"]{
+    background: linear-gradient(#2f2f2f, #2f2f2f);
+}
+
+[data-host-runtime="nw-js"] body > [data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] {
+    visibility: hidden;
+    display: none;
+}
+
+/***************************************************************************************************************************************
+*
+*   TITLEBAR TEXT NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarTextNode"] {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 1.05em;
+    cursor: default;
+    text-align: center;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="active out off"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarTextNode"] {
+    color: #797777;
+    text-shadow: -0.05em -0.05em 0em #D0D0D0;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="inactive out off"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarTextNode"],
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state~="disabled"] > [data-pixie-type~="titleBarNode"] > [data-pixie-type~="titleBarTextNode"] {
+    color: #929090;
+    text-shadow: none;
+}
+/***************************************************************************************************************************************
+*
+*   TITLEBAR CLOSE NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"] {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    z-index: 1;
+}
+
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="enabled inactive out off"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"] {
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 1px rgba(0,0,0,0.05);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"] {
+    background-color: #D0CFCF;
+    border-radius: 8px;
+    border-bottom: 1px solid #DEDEDE;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    color: #929292;
+    font-size: 0.9em;
+    cursor: default;
+    line-height: 1.2em;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(255,0,0,0.6);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"]:hover:after {
+    background-color: rgba(255,0,0,0.8);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="titleBarNode"]:hover > [data-pixie-type~="titleBarCloseNode"]:after {
+    /*text-shadow: 0px -1px 0px rgba(241, 241, 241, 0.8);*/
+}
+/***************************************************************************************************************************************
+*
+*   STRIP NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="stripNode"] {
+    background-color: rgba(235,235,235,0.8);
+}
+/***************************************************************************************************************************************
+*
+*   CONTENT NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="contentNode"] {
+    position: relative;
+    background-color: #d6d6d6;
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"]:not([data-pixie-fullScreen="true"]) > [data-pixie-type~="contentNode"] {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="inactive out off"] > [data-pixie-type~="contentNode"] {
+    /*background-color: #dedede;*/
+    /*width: 100%;*/
+    /*height: calc(100% - 17px);*/
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="active out off"] > [data-pixie-type~="contentNode"] {
+    /*width: 100%;*/
+    /*height: calc(100% - 17px);*/
+    background-color: #C0C0C0;
+}
+[data-pixie-theme="vanilla"][data-pixie-style="dark"][data-pixie-type^="Panel"][data-pixie-state$="active out off"] > [data-pixie-type~="contentNode"] {
+    background-color: transparent;
+}
+/*[data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="contentNode"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #C0C0C0;
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.1);
+}*/
+[data-host-runtime="nw-js"] body > [data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="contentNode"] {
+    border-radius: 0px;
+    box-shadow: none;
+}
+[data-host-runtime="nw-js"][data-platform="macos"] body > [data-pixie-theme="vanilla"][data-pixie-type^="Panel"] > [data-pixie-type~="contentNode"] {
+    border-top: 1px solid rgb(160,160,160);
+}
+/***************************************************************************************************************************************
+*
+*   SIZER NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="enabled inactive out off"] > [data-pixie-type~="sizerNode"] {
+    cursor: nw-resize;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0px;
+    right: 0px;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state$="enabled active out off"] > [data-pixie-type~="sizerNode"] {
+    cursor: nw-resize;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0px;
+    right: 0px;
+}
+/***************************************************************************************************************************************
+*
+*   DISABLE NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Panel"][data-pixie-state~="disabled"] > [data-pixie-type~="contentNode"] > :not([data-pixie-type~="disableNode"]) {
+    opacity: 0.3 !important;
+}

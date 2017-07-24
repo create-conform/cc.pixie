@@ -1,0 +1,27 @@
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Split"][data-pixie-type~="node"] {
+
+}
+
+[data-pixie-theme="darktech"][data-pixie-type^="Split"][data-pixie-state$="enabled inactive out off"] > * > [data-pixie-type~="sizerNode"] {
+    top: -1px;
+    left: -1px;
+    /*border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);*/
+    border-left: 1px solid #808080;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="Split"][data-pixie-state$="enabled inactive out off"] > * > [data-pixie-type~="sizerNode"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* right: 0px; */
+    bottom: 0px;
+    border-left: 1px solid #212121;
+    border-right: 1px solid #808080;
+}

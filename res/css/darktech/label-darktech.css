@@ -1,0 +1,18 @@
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Label"][data-pixie-type~="node"] {
+    color: #A0A0A0;
+    text-align: left;
+    font-size: 0.95em;
+    cursor: default;
+    padding: 0.1em;
+    min-width: 8px;
+    min-height: 8px;
+}
+
+[data-pixie-theme="darktech"][data-pixie-type^="Label"][data-pixie-align^="center"][data-pixie-type~="node"] {
+    text-align: center;
+}

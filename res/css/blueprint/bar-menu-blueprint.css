@@ -1,0 +1,49 @@
+[data-pixie-theme="blueprint"][data-pixie-type^="BarMenu "][data-pixie-type~="node"] {
+    min-width: 100%;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 3px 0px;
+    position: absolute;
+    z-index: 65535;
+    background-color: rgba(255,255,255,0.80);
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+    /*border: 1px solid #828282;*/
+    /*border: 1px solid #8a8a8a;*/
+    border-radius: 3px;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarMenu "][data-pixie-type~="node"]:after {
+    border: 1px solid rgb(255,255,255);
+    border-top: 1px solid rgba(255,255,255,0.0);
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-radius: inherit;
+    z-index: -1;
+}
+[data-pixie-theme="blueprint"][data-pixie-align="right"] > [data-pixie-type^="BarItem "] > [data-pixie-type^="BarMenu "][data-pixie-type~="node"] {
+    left: auto;
+    right: 0px;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarMenu "][data-pixie-type~="node"] {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    left: 0px;
+}
+[data-pixie-theme="blueprint"][data-pixie-align="right"] [data-pixie-type^="BarMenuItem "] > [data-pixie-theme="blueprint"][data-pixie-type^="BarMenu "][data-pixie-type~="node"] {
+    left: auto;
+    right: 100%;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarMenuItem "] > [data-pixie-theme="blueprint"][data-pixie-type^="BarMenu "][data-pixie-type~="node"]
+{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 3px;
+    top: -3px;
+    left: calc(100% - 1px);
+    min-width: inherit;
+}
+[data-pixie-theme="blueprint"][data-pixie-type^="BarMenuItem "] > [data-pixie-theme="blueprint"][data-pixie-type^="BarMenu "][data-pixie-type~="node"]:after {
+    border: 1px solid rgb(255,255,255);
+}

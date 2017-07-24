@@ -1,0 +1,15 @@
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="darktech"][data-pixie-type^="Tree"][data-pixie-type~="node"] {
+
+}
+
+[data-pixie-theme="darktech"][data-pixie-type^="Tree"][data-pixie-state$="enabled inactive out off"] > * > [data-pixie-type~="sizerNode"] {
+    top: -1px;
+    left: -1px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}

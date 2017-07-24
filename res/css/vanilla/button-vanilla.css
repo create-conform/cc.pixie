@@ -1,0 +1,89 @@
+/***************************************************************************************************************************************
+*
+*   NODE
+*
+***************************************************************************************************************************************/
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-style="dark"] {
+    color: #E2E2E2;
+    text-shadow: -0.08em -0.08em 0em #616161;
+    border: 1px solid rgba(0,0,0,0.5);
+    background: -webkit-linear-gradient(#676767, #4c4c4c);
+    background: -moz-linear-gradient(top, #676767, #4c4c4c);
+    background: -ms-linear-gradient(#676767, #4c4c4c);
+    background: -o-linear-gradient(#676767, #4c4c4c);
+    background: linear-gradient(#676767, #4c4c4c);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"] {
+    color: #696969;
+    text-shadow: 0.08em 0.08em 0em #dcdcdc;
+    text-align: center;
+    cursor: default;
+    padding: 0.4em 1em;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    background: -webkit-linear-gradient(#e6e6e6, #c7c7c7);
+    background: -moz-linear-gradient(top, #e6e6e6, #c7c7c7);
+    background: -ms-linear-gradient(#e6e6e6, #c7c7c7);
+    background: -o-linear-gradient(#e6e6e6, #c7c7c7);
+    background: linear-gradient(#e6e6e6, #c7c7c7);
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-style="dark"][data-pixie-state$="enabled inactive over off"] {
+    border: 1px solid #252525;
+    background: -webkit-linear-gradient(#747474, #5f5f5f);
+    background: -moz-linear-gradient(top, #747474, #5f5f5f);
+    background: -ms-linear-gradient(#747474, #5f5f5f);
+    background: -o-linear-gradient(#747474, #5f5f5f);
+    background: linear-gradient(#747474, #5f5f5f);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled inactive over off"] {
+    border: 1px solid #9c9c9c;
+    background: -webkit-linear-gradient(#dedede, #cacaca);
+    background: -moz-linear-gradient(top, #dedede, #cacaca);
+    background: -ms-linear-gradient(#dedede, #cacaca);
+    background: -o-linear-gradient(#dedede, #cacaca);
+    background: linear-gradient(#dedede, #cacaca);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid #B7B7B7;
+    border-radius: 4px;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-style="dark"]:after {
+    border: 2px solid rgba(0,0,0,0.2);
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled inactive over off"]:after {
+    border: 2px solid #e6e6e6;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled active out on"]:after {
+    border: 2px solid #0053c7;
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled active over on"]:after {
+    border: 2px solid #0068e6;
+}
+/*[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"]:after {
+    position: absolute;
+    top: -1px; bottom: -1px;
+    left: -1px; right: -1px;
+    background: linear-gradient(#383838, #1F1F1F);
+    content: '';
+    z-index: -1;
+    border-radius: 3px;
+}*/
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled inactive out off"] {
+    /*box-shadow: 12px 12px 55px rgba(0,0,0,0.3);*/
+}
+[data-pixie-theme="vanilla"][data-pixie-type^="Button"][data-pixie-type~="node"][data-pixie-state$="enabled active out off"] {
+    /*box-shadow: 12px 12px 75px rgba(0,0,0,0.6);*/
+}

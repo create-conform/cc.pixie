@@ -1,0 +1,21 @@
+[data-pixie-theme="darktech"] {
+    /*DEFAULT COLOR*/
+    color: #E2E2E2;
+    /*DEFAULT FONT*/
+    font-family: 'roboto-regular';
+    /*DEFAULT FONT SIZE*/
+    font-size: 12px;
+    /*DEFAULT FONT WEIGHT*/
+    font-weight: normal;
+}
+[data-pixie-theme="darktech"][data-pixie-type^="UI"][data-pixie-type~="node"] {
+    background-color: #252525;
+}
+[data-pixie-theme="darktech"] [data-pixie-type~="disableNode"]:not([data-pixie-disable-status=""]) {
+    background-color: rgba(25, 25, 25,0.7);
+}
+[data-pixie-theme="darktech"] [data-pixie-type~="disableNode"]:not([data-pixie-disable-status=""]):after {
+    box-shadow: none;
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.1);
+}
