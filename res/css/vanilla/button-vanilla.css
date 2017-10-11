@@ -28,6 +28,8 @@
     background: -ms-linear-gradient(#e6e6e6, #c7c7c7);
     background: -o-linear-gradient(#e6e6e6, #c7c7c7);
     background: linear-gradient(#e6e6e6, #c7c7c7);
+    font-weight: bold;
+    font-size: 0.9em;
 
     display: flex !important;
     align-items: center;
