@@ -8,7 +8,7 @@ function Pixie(pkx, module, configuration) {
     var host = require("cc.host");
     var io = require("cc.io");
     var starfox = require("cc.starfox");
-    var controlBase = require("cc.pixie.0.1/control-base.js");
+    var controlBase = require("cc.pixie/control-base.js");
 
     //
     // CONSTANTS
@@ -73,23 +73,23 @@ function Pixie(pkx, module, configuration) {
     //}
     // register all built-in controls
     [
-        require("cc.pixie.0.1/button.js"),
-        require("cc.pixie.0.1/panel.js"),
-        require("cc.pixie.0.1/split.js"),
-        require("cc.pixie.0.1/label.js"),
-        require("cc.pixie.0.1/image.js"),
-        require("cc.pixie.0.1/group.js"),
-        require("cc.pixie.0.1/bar.js"),
-        require("cc.pixie.0.1/bar-menu.js"),
-        require("cc.pixie.0.1/bar-menu-item.js"),
-        require("cc.pixie.0.1/bar-item.js"),
-        require("cc.pixie.0.1/bar-group.js")
+        require("cc.pixie/button.js"),
+        require("cc.pixie/panel.js"),
+        require("cc.pixie/split.js"),
+        require("cc.pixie/label.js"),
+        require("cc.pixie/image.js"),
+        require("cc.pixie/group.js"),
+        require("cc.pixie/bar.js"),
+        require("cc.pixie/bar-menu.js"),
+        require("cc.pixie/bar-menu-item.js"),
+        require("cc.pixie/bar-item.js"),
+        require("cc.pixie/bar-group.js")
     ].map(self.registerControl);
 
     //
     // DEBUG
     //
-    starfox.load("pkx:///cc.pixie.0.1.0/test/test.xml").then().catch(console.error);
+    starfox.load("pkx:///cc.pixie.0.2.0/test/test.xml").then().catch(console.error);
 }
 
 var singleton;
